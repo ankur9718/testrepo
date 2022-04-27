@@ -6,6 +6,8 @@ jobs:
       steps:
          - checkout
         
+         - run:
+            git config --global url."https://$${GITHUB_ACCESS_TOKEN}:@github.com/".insteadOf https://github.com/
                                 
          - run:
             git clone https://github.com/Zimbra/zm-cicd.git
